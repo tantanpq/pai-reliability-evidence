@@ -15,6 +15,7 @@ This repository publishes bounded reliability evidence and reusable verification
 - Executor-timeout supersession: an infrastructure-timeout FAIL was preserved and explicitly superseded only after a later bounded PASS satisfied the acceptance evidence, including **39 focused tests across 4 suites**.
 - Evidence-first recoverability taxonomy: independent QA matched **174/174** baseline source tuples, passed **159/159** baseline tests, preserved **17/17** candidate source tuples, matched **4/4** pinned dependencies, and passed the full **166/166** isolated candidate suite. The work remained candidate-only and introduced no retry engine or control-plane authority.
 - Fail-closed ACL scope validation: candidate checks reported **3/3 syntax** and **4/4 unit/security** passes plus repeated isolated apply/readback; frozen-byte independent security QA subsequently reached **DONE / PASS** under exact-hash, containment, traversal/normalization, forbidden-path, fail-closed, and no-live-mutation acceptance. Physical/live validation is not claimed.
+- Evidence-driven reuse freeze: a terminal bootstrap/reuse run reached **DONE**, preserved unavailable proof as `UNKNOWN` rather than inventing missing components, reduced the next frontier to two bounded read/binding investigations, and independently re-verified all **8/8** evidence-bundle SHA-256 entries before publication.
 
 Evidence snapshots:
 
@@ -24,6 +25,7 @@ Evidence snapshots:
 - [`evidence/2026-08-30-executor-timeout-supersession.md`](evidence/2026-08-30-executor-timeout-supersession.md)
 - [`evidence/2026-08-30-recoverability-taxonomy.md`](evidence/2026-08-30-recoverability-taxonomy.md)
 - [`evidence/2026-08-30-fail-closed-acl-scope-validation.md`](evidence/2026-08-30-fail-closed-acl-scope-validation.md)
+- [`evidence/2026-08-30-evidence-driven-reuse-freeze.md`](evidence/2026-08-30-evidence-driven-reuse-freeze.md)
 
 Reusable derivatives:
 
@@ -33,14 +35,17 @@ Reusable derivatives:
 - [`patterns/assurance-proof-pattern-pack.md`](patterns/assurance-proof-pattern-pack.md)
 - [`patterns/evidence-first-recovery-classification-checklist.md`](patterns/evidence-first-recovery-classification-checklist.md)
 - [`patterns/fail-closed-acl-scope-validation-checklist.md`](patterns/fail-closed-acl-scope-validation-checklist.md)
+- [`patterns/verified-reuse-freeze-checklist.md`](patterns/verified-reuse-freeze-checklist.md)
 - [`case-studies/reversible-cutover-terminal-readback.md`](case-studies/reversible-cutover-terminal-readback.md)
 - [`case-studies/deterministic-two-node-failover-simulation.md`](case-studies/deterministic-two-node-failover-simulation.md)
 - [`case-studies/fail-closed-recovery-classification.md`](case-studies/fail-closed-recovery-classification.md)
 - [`case-studies/acl-boundary-tightening-with-frozen-byte-qa.md`](case-studies/acl-boundary-tightening-with-frozen-byte-qa.md)
+- [`case-studies/reuse-freeze-before-successor-generation.md`](case-studies/reuse-freeze-before-successor-generation.md)
 - [`demos/reversible-cutover-evidence-walkthrough.md`](demos/reversible-cutover-evidence-walkthrough.md)
 - [`demos/failover-fencing-evidence-walkthrough.md`](demos/failover-fencing-evidence-walkthrough.md)
 - [`demos/recoverability-taxonomy-walkthrough.md`](demos/recoverability-taxonomy-walkthrough.md)
 - [`demos/acl-scope-validation-evidence-walkthrough.md`](demos/acl-scope-validation-evidence-walkthrough.md)
+- [`demos/unknown-is-not-missing-walkthrough.md`](demos/unknown-is-not-missing-walkthrough.md)
 
 See [`PROVENANCE.md`](PROVENANCE.md) for publication boundaries.
 
