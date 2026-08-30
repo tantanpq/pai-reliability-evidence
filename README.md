@@ -26,6 +26,7 @@ Reusable derivatives:
 - [`patterns/reversible-cutover-verification-checklist.md`](patterns/reversible-cutover-verification-checklist.md)
 - [`patterns/fail-closed-failover-checklist.md`](patterns/fail-closed-failover-checklist.md)
 - [`patterns/terminal-result-supersession-checklist.md`](patterns/terminal-result-supersession-checklist.md)
+- [`patterns/assurance-proof-pattern-pack.md`](patterns/assurance-proof-pattern-pack.md)
 - [`case-studies/reversible-cutover-terminal-readback.md`](case-studies/reversible-cutover-terminal-readback.md)
 - [`case-studies/deterministic-two-node-failover-simulation.md`](case-studies/deterministic-two-node-failover-simulation.md)
 - [`demos/reversible-cutover-evidence-walkthrough.md`](demos/reversible-cutover-evidence-walkthrough.md)
