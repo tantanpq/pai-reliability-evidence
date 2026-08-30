@@ -24,6 +24,7 @@ This repository publishes bounded reliability evidence and reusable verification
 - Immutable provenance-chain reconstruction: **125/125** source-manifest checks matched, a regenerated **55-entry** candidate tree matched its recorded fingerprint, the focused continuity suite passed **58/58**, executor/QA identities matched the recorded evidence chain, the reported change claim was byte-derived, and read-only pre/post bundle diff was **0**.
 - Immutable evidence freeze QA: independent readback covered **5,558 files / 194,318,686 bytes**, with zero manifest mismatches, exact pre/post evidence-digest agreement, and zero candidate/live mutations during QA. This proves freeze integrity only; physical activation and promotion remain separate gates.
 - Portable secret classification: build and independent QA both terminalized `DONE`; adversarial sensitive/benign/path/scope/carrier/UTF-8/BOM fixtures passed, showing bounded false-positive reduction for benign token-like identifiers while preserving the tested fail-closed secret classes. No live-runtime or release mutation was required, and universal secret detection is not claimed.
+- Post-promotion ownership continuity: the bounded soak and independent QA both terminalized `DONE / PASS`; **30/30** health observations passed, the associated campaign check completed **48/48** with **0 failures**, active claims remained **0** across the soak observations, and targeted regressions completed **12/12**. The prior competing owner remained disabled. Long-term HA/SLO or universal scheduler correctness is not claimed.
 
 Evidence snapshots:
 
@@ -42,6 +43,7 @@ Evidence snapshots:
 - [`evidence/2026-08-30-immutable-provenance-chain.md`](evidence/2026-08-30-immutable-provenance-chain.md)
 - [`evidence/2026-08-30-immutable-evidence-freeze-qa.md`](evidence/2026-08-30-immutable-evidence-freeze-qa.md)
 - [`evidence/2026-08-30-portable-secret-classification.md`](evidence/2026-08-30-portable-secret-classification.md)
+- [`evidence/2026-08-30-post-promotion-ownership-continuity.md`](evidence/2026-08-30-post-promotion-ownership-continuity.md)
 
 Reusable derivatives:
 
@@ -60,6 +62,7 @@ Reusable derivatives:
 - [`patterns/provenance-chain-receipt-checklist.md`](patterns/provenance-chain-receipt-checklist.md)
 - [`patterns/immutable-evidence-freeze-qa-checklist.md`](patterns/immutable-evidence-freeze-qa-checklist.md)
 - [`patterns/source-safety-gate-checklist.md`](patterns/source-safety-gate-checklist.md)
+- [`patterns/single-owner-cutover-soak-gate.md`](patterns/single-owner-cutover-soak-gate.md)
 - [`case-studies/reversible-cutover-terminal-readback.md`](case-studies/reversible-cutover-terminal-readback.md)
 - [`case-studies/deterministic-two-node-failover-simulation.md`](case-studies/deterministic-two-node-failover-simulation.md)
 - [`case-studies/fail-closed-recovery-classification.md`](case-studies/fail-closed-recovery-classification.md)
@@ -73,6 +76,7 @@ Reusable derivatives:
 - [`case-studies/reconstructing-evidence-behind-green-result.md`](case-studies/reconstructing-evidence-behind-green-result.md)
 - [`case-studies/freezing-a-large-evidence-tree-before-promotion.md`](case-studies/freezing-a-large-evidence-tree-before-promotion.md)
 - [`case-studies/when-token-is-just-a-variable-name.md`](case-studies/when-token-is-just-a-variable-name.md)
+- [`case-studies/a-canary-pass-is-not-a-stable-owner.md`](case-studies/a-canary-pass-is-not-a-stable-owner.md)
 - [`demos/reversible-cutover-evidence-walkthrough.md`](demos/reversible-cutover-evidence-walkthrough.md)
 - [`demos/failover-fencing-evidence-walkthrough.md`](demos/failover-fencing-evidence-walkthrough.md)
 - [`demos/recoverability-taxonomy-walkthrough.md`](demos/recoverability-taxonomy-walkthrough.md)
