@@ -13,6 +13,7 @@ This repository publishes bounded reliability evidence and reusable verification
 - Reversible cutover: independently QA-passed candidate, exact checked-byte readback, bounded restart, canary verification, terminal completion, and post-terminal readback passed.
 - Deterministic two-node failover simulation: **21/21 scenarios passed**, including strict lease expiry, single-writer takeover, monotonic fencing, stale-owner rejection, terminal-result reconciliation, provenance guards, and fail-closed unsafe-state handling. Production activation remained disabled.
 - Executor-timeout supersession: an infrastructure-timeout FAIL was preserved and explicitly superseded only after a later bounded PASS satisfied the acceptance evidence, including **39 focused tests across 4 suites**.
+- Evidence-first recoverability taxonomy: independent QA matched **174/174** baseline source tuples, passed **159/159** baseline tests, preserved **17/17** candidate source tuples, matched **4/4** pinned dependencies, and passed the full **166/166** isolated candidate suite. The work remained candidate-only and introduced no retry engine or control-plane authority.
 
 Evidence snapshots:
 
@@ -20,6 +21,7 @@ Evidence snapshots:
 - [`evidence/2026-08-30-reversible-cutover-verification.md`](evidence/2026-08-30-reversible-cutover-verification.md)
 - [`evidence/2026-08-30-safe-failover-simulation.md`](evidence/2026-08-30-safe-failover-simulation.md)
 - [`evidence/2026-08-30-executor-timeout-supersession.md`](evidence/2026-08-30-executor-timeout-supersession.md)
+- [`evidence/2026-08-30-recoverability-taxonomy.md`](evidence/2026-08-30-recoverability-taxonomy.md)
 
 Reusable derivatives:
 
@@ -27,10 +29,13 @@ Reusable derivatives:
 - [`patterns/fail-closed-failover-checklist.md`](patterns/fail-closed-failover-checklist.md)
 - [`patterns/terminal-result-supersession-checklist.md`](patterns/terminal-result-supersession-checklist.md)
 - [`patterns/assurance-proof-pattern-pack.md`](patterns/assurance-proof-pattern-pack.md)
+- [`patterns/evidence-first-recovery-classification-checklist.md`](patterns/evidence-first-recovery-classification-checklist.md)
 - [`case-studies/reversible-cutover-terminal-readback.md`](case-studies/reversible-cutover-terminal-readback.md)
 - [`case-studies/deterministic-two-node-failover-simulation.md`](case-studies/deterministic-two-node-failover-simulation.md)
+- [`case-studies/fail-closed-recovery-classification.md`](case-studies/fail-closed-recovery-classification.md)
 - [`demos/reversible-cutover-evidence-walkthrough.md`](demos/reversible-cutover-evidence-walkthrough.md)
 - [`demos/failover-fencing-evidence-walkthrough.md`](demos/failover-fencing-evidence-walkthrough.md)
+- [`demos/recoverability-taxonomy-walkthrough.md`](demos/recoverability-taxonomy-walkthrough.md)
 
 See [`PROVENANCE.md`](PROVENANCE.md) for publication boundaries.
 
