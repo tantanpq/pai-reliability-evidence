@@ -16,6 +16,7 @@ This repository publishes bounded reliability evidence and reusable verification
 - Evidence-first recoverability taxonomy: independent QA matched **174/174** baseline source tuples, passed **159/159** baseline tests, preserved **17/17** candidate source tuples, matched **4/4** pinned dependencies, and passed the full **166/166** isolated candidate suite. The work remained candidate-only and introduced no retry engine or control-plane authority.
 - Fail-closed ACL scope validation: candidate checks reported **3/3 syntax** and **4/4 unit/security** passes plus repeated isolated apply/readback; frozen-byte independent security QA subsequently reached **DONE / PASS** under exact-hash, containment, traversal/normalization, forbidden-path, fail-closed, and no-live-mutation acceptance. Physical/live validation is not claimed.
 - Evidence-driven reuse freeze: a terminal bootstrap/reuse run reached **DONE**, preserved unavailable proof as `UNKNOWN` rather than inventing missing components, reduced the next frontier to two bounded read/binding investigations, and independently re-verified all **8/8** evidence-bundle SHA-256 entries before publication.
+- Pre-activation freeze verification: candidate and independent read-only QA both reached terminal `DONE`; the complete suite passed **166/166**, focused suites passed **24/24**, a **171-entry** candidate tree was independently fingerprint-matched, and six bounded delta hashes were checked. The candidate deliberately remained frozen and not installed, preserving verification and runtime activation as separate decisions.
 
 Evidence snapshots:
 
@@ -26,6 +27,7 @@ Evidence snapshots:
 - [`evidence/2026-08-30-recoverability-taxonomy.md`](evidence/2026-08-30-recoverability-taxonomy.md)
 - [`evidence/2026-08-30-fail-closed-acl-scope-validation.md`](evidence/2026-08-30-fail-closed-acl-scope-validation.md)
 - [`evidence/2026-08-30-evidence-driven-reuse-freeze.md`](evidence/2026-08-30-evidence-driven-reuse-freeze.md)
+- [`evidence/2026-08-30-pre-activation-freeze-verification.md`](evidence/2026-08-30-pre-activation-freeze-verification.md)
 
 Reusable derivatives:
 
@@ -36,16 +38,19 @@ Reusable derivatives:
 - [`patterns/evidence-first-recovery-classification-checklist.md`](patterns/evidence-first-recovery-classification-checklist.md)
 - [`patterns/fail-closed-acl-scope-validation-checklist.md`](patterns/fail-closed-acl-scope-validation-checklist.md)
 - [`patterns/verified-reuse-freeze-checklist.md`](patterns/verified-reuse-freeze-checklist.md)
+- [`patterns/pre-activation-freeze-gate-checklist.md`](patterns/pre-activation-freeze-gate-checklist.md)
 - [`case-studies/reversible-cutover-terminal-readback.md`](case-studies/reversible-cutover-terminal-readback.md)
 - [`case-studies/deterministic-two-node-failover-simulation.md`](case-studies/deterministic-two-node-failover-simulation.md)
 - [`case-studies/fail-closed-recovery-classification.md`](case-studies/fail-closed-recovery-classification.md)
 - [`case-studies/acl-boundary-tightening-with-frozen-byte-qa.md`](case-studies/acl-boundary-tightening-with-frozen-byte-qa.md)
 - [`case-studies/reuse-freeze-before-successor-generation.md`](case-studies/reuse-freeze-before-successor-generation.md)
+- [`case-studies/verified-but-not-activated.md`](case-studies/verified-but-not-activated.md)
 - [`demos/reversible-cutover-evidence-walkthrough.md`](demos/reversible-cutover-evidence-walkthrough.md)
 - [`demos/failover-fencing-evidence-walkthrough.md`](demos/failover-fencing-evidence-walkthrough.md)
 - [`demos/recoverability-taxonomy-walkthrough.md`](demos/recoverability-taxonomy-walkthrough.md)
 - [`demos/acl-scope-validation-evidence-walkthrough.md`](demos/acl-scope-validation-evidence-walkthrough.md)
 - [`demos/unknown-is-not-missing-walkthrough.md`](demos/unknown-is-not-missing-walkthrough.md)
+- [`demos/green-build-frozen-release-walkthrough.md`](demos/green-build-frozen-release-walkthrough.md)
 
 See [`PROVENANCE.md`](PROVENANCE.md) for publication boundaries.
 
