@@ -23,6 +23,7 @@ This repository publishes bounded reliability evidence and reusable verification
 - Successor composition verification: independent compositional QA returned **PASS_RELEASE_CANDIDATE** with no critical blockers; inherited security evidence included **42 independent QA checks**, four reused delta files were byte-identical to the prior reviewed candidate, the remaining integration change was bounded to **4 nonblank diff records**, and configured plus exact successor checks completed with exit `0` and empty stderr. The full successor tree was not independently re-executed, and activation is not claimed.
 - Immutable provenance-chain reconstruction: **125/125** source-manifest checks matched, a regenerated **55-entry** candidate tree matched its recorded fingerprint, the focused continuity suite passed **58/58**, executor/QA identities matched the recorded evidence chain, the reported change claim was byte-derived, and read-only pre/post bundle diff was **0**.
 - Immutable evidence freeze QA: independent readback covered **5,558 files / 194,318,686 bytes**, with zero manifest mismatches, exact pre/post evidence-digest agreement, and zero candidate/live mutations during QA. This proves freeze integrity only; physical activation and promotion remain separate gates.
+- Portable secret classification: build and independent QA both terminalized `DONE`; adversarial sensitive/benign/path/scope/carrier/UTF-8/BOM fixtures passed, showing bounded false-positive reduction for benign token-like identifiers while preserving the tested fail-closed secret classes. No live-runtime or release mutation was required, and universal secret detection is not claimed.
 
 Evidence snapshots:
 
@@ -40,6 +41,7 @@ Evidence snapshots:
 - [`evidence/2026-08-30-successor-composition-verification.md`](evidence/2026-08-30-successor-composition-verification.md)
 - [`evidence/2026-08-30-immutable-provenance-chain.md`](evidence/2026-08-30-immutable-provenance-chain.md)
 - [`evidence/2026-08-30-immutable-evidence-freeze-qa.md`](evidence/2026-08-30-immutable-evidence-freeze-qa.md)
+- [`evidence/2026-08-30-portable-secret-classification.md`](evidence/2026-08-30-portable-secret-classification.md)
 
 Reusable derivatives:
 
@@ -57,6 +59,7 @@ Reusable derivatives:
 - [`patterns/compositional-successor-verification-checklist.md`](patterns/compositional-successor-verification-checklist.md)
 - [`patterns/provenance-chain-receipt-checklist.md`](patterns/provenance-chain-receipt-checklist.md)
 - [`patterns/immutable-evidence-freeze-qa-checklist.md`](patterns/immutable-evidence-freeze-qa-checklist.md)
+- [`patterns/source-safety-gate-checklist.md`](patterns/source-safety-gate-checklist.md)
 - [`case-studies/reversible-cutover-terminal-readback.md`](case-studies/reversible-cutover-terminal-readback.md)
 - [`case-studies/deterministic-two-node-failover-simulation.md`](case-studies/deterministic-two-node-failover-simulation.md)
 - [`case-studies/fail-closed-recovery-classification.md`](case-studies/fail-closed-recovery-classification.md)
@@ -69,6 +72,7 @@ Reusable derivatives:
 - [`case-studies/review-the-delta-not-the-release-label.md`](case-studies/review-the-delta-not-the-release-label.md)
 - [`case-studies/reconstructing-evidence-behind-green-result.md`](case-studies/reconstructing-evidence-behind-green-result.md)
 - [`case-studies/freezing-a-large-evidence-tree-before-promotion.md`](case-studies/freezing-a-large-evidence-tree-before-promotion.md)
+- [`case-studies/when-token-is-just-a-variable-name.md`](case-studies/when-token-is-just-a-variable-name.md)
 - [`demos/reversible-cutover-evidence-walkthrough.md`](demos/reversible-cutover-evidence-walkthrough.md)
 - [`demos/failover-fencing-evidence-walkthrough.md`](demos/failover-fencing-evidence-walkthrough.md)
 - [`demos/recoverability-taxonomy-walkthrough.md`](demos/recoverability-taxonomy-walkthrough.md)
@@ -81,6 +85,7 @@ Reusable derivatives:
 - [`demos/successor-composition-evidence-walkthrough.md`](demos/successor-composition-evidence-walkthrough.md)
 - [`demos/provenance-chain-evidence-walkthrough.md`](demos/provenance-chain-evidence-walkthrough.md)
 - [`demos/large-tree-freeze-evidence-storyboard.md`](demos/large-tree-freeze-evidence-storyboard.md)
+- [`demos/source-safety-gate-evidence-walkthrough.md`](demos/source-safety-gate-evidence-walkthrough.md)
 
 See [`PROVENANCE.md`](PROVENANCE.md) for publication boundaries.
 
