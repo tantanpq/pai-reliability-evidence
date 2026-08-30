@@ -19,6 +19,7 @@ This repository publishes bounded reliability evidence and reusable verification
 - Pre-activation freeze verification: candidate and independent read-only QA both reached terminal `DONE`; the complete suite passed **166/166**, focused suites passed **24/24**, a **171-entry** candidate tree was independently fingerprint-matched, and six bounded delta hashes were checked. The candidate deliberately remained frozen and not installed, preserving verification and runtime activation as separate decisions.
 - Portable byte-fidelity verification: independent QA verified **11/11 immutable manifest entries** totaling **22,356 bytes**, reconstructed the pinned baseline byte-for-byte, passed ordinary UTF-8 and UTF-8-with-BOM round trips, rejected malformed/unsupported text and embedded-NUL cases, and independently confirmed exact staged bytes without live-runtime mutation.
 - Software DR contract verification: **13/13 ordinary allowlisted files** were covered by full/incremental manifests and restored byte-for-byte in isolation; secret input was excluded, unsafe/missing/corrupt cases failed closed, and sealed-copy reuse/mutation behavior was verified at the software layer. Offline or physical immutability remains explicitly unproven.
+- Physical startup validation: the live startup path reached terminal **DONE / PASS** and independent post-effect QA also passed; a low-density canary completed **1/1**, a bounded burst completed **10/10**, independent re-query confirmed **11/11** physical completions, burst overlap peaked at **10**, execution/result identities were unique, and the narrow permission boundary remained fail-closed outside the intended scope. Continued polling and remote pull/placement remain outside the claim.
 
 Evidence snapshots:
 
@@ -32,6 +33,7 @@ Evidence snapshots:
 - [`evidence/2026-08-30-pre-activation-freeze-verification.md`](evidence/2026-08-30-pre-activation-freeze-verification.md)
 - [`evidence/2026-08-30-portable-byte-fidelity.md`](evidence/2026-08-30-portable-byte-fidelity.md)
 - [`evidence/2026-08-30-software-dr-contract.md`](evidence/2026-08-30-software-dr-contract.md)
+- [`evidence/2026-08-30-physical-startup-validation.md`](evidence/2026-08-30-physical-startup-validation.md)
 
 Reusable derivatives:
 
@@ -45,6 +47,7 @@ Reusable derivatives:
 - [`patterns/pre-activation-freeze-gate-checklist.md`](patterns/pre-activation-freeze-gate-checklist.md)
 - [`patterns/portable-byte-fidelity-checklist.md`](patterns/portable-byte-fidelity-checklist.md)
 - [`patterns/software-dr-acceptance-checklist.md`](patterns/software-dr-acceptance-checklist.md)
+- [`patterns/physical-startup-verification-checklist.md`](patterns/physical-startup-verification-checklist.md)
 - [`case-studies/reversible-cutover-terminal-readback.md`](case-studies/reversible-cutover-terminal-readback.md)
 - [`case-studies/deterministic-two-node-failover-simulation.md`](case-studies/deterministic-two-node-failover-simulation.md)
 - [`case-studies/fail-closed-recovery-classification.md`](case-studies/fail-closed-recovery-classification.md)
@@ -53,6 +56,7 @@ Reusable derivatives:
 - [`case-studies/verified-but-not-activated.md`](case-studies/verified-but-not-activated.md)
 - [`case-studies/verify-bytes-before-trusting-text.md`](case-studies/verify-bytes-before-trusting-text.md)
 - [`case-studies/prove-the-restore-not-just-the-backup.md`](case-studies/prove-the-restore-not-just-the-backup.md)
+- [`case-studies/from-permission-repair-to-physical-startup-proof.md`](case-studies/from-permission-repair-to-physical-startup-proof.md)
 - [`demos/reversible-cutover-evidence-walkthrough.md`](demos/reversible-cutover-evidence-walkthrough.md)
 - [`demos/failover-fencing-evidence-walkthrough.md`](demos/failover-fencing-evidence-walkthrough.md)
 - [`demos/recoverability-taxonomy-walkthrough.md`](demos/recoverability-taxonomy-walkthrough.md)
@@ -61,6 +65,7 @@ Reusable derivatives:
 - [`demos/green-build-frozen-release-walkthrough.md`](demos/green-build-frozen-release-walkthrough.md)
 - [`demos/same-text-different-bytes-walkthrough.md`](demos/same-text-different-bytes-walkthrough.md)
 - [`demos/backup-is-not-recovery-test-walkthrough.md`](demos/backup-is-not-recovery-test-walkthrough.md)
+- [`demos/physical-startup-evidence-walkthrough.md`](demos/physical-startup-evidence-walkthrough.md)
 
 See [`PROVENANCE.md`](PROVENANCE.md) for publication boundaries.
 
