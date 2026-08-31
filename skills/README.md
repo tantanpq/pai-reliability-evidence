@@ -142,6 +142,35 @@ Each skill has a narrow purpose, a minimal input contract, and a bounded output.
 
 **Output:** public-safe evidence, checklist, case study, demo, or workflow candidate.
 
+---
+
+## Skill 7 — Audit Finding Clustering
+
+**Use when:** an audit produces many repeated observations and you need to distinguish coverage volume from actual defect count before repair work exists.
+
+**Inputs:**
+
+- occurrence-level findings;
+- failed/questioned invariant;
+- evidence references;
+- coverage state;
+- candidate owner and mutable scope where known.
+
+**Procedure:**
+
+1. Preserve every raw occurrence and its coverage state.
+2. Deduplicate exact repeats without deleting prevalence evidence.
+3. Separate `NOT_DONE`, `UNKNOWN`, and `INCONCLUSIVE` coverage from proven target defects.
+4. Cluster distinct symptoms only when causal/root seam, owner, invariant, or mutable-scope evidence supports the merge.
+5. Keep similar text in separate clusters when causal lineage differs.
+6. Grade clusters as `QUALIFIED_FINDING`, `NEEDS_DISCRIMINATION`, or `REPAIR_READY` rather than turning every observation into a task.
+7. Apply prioritization/caps after clustering so duplicate observations do not crowd out distinct defects.
+8. Admit repair only through the existing governed owner with bounded scope, acceptance, and rollback.
+
+**Output:** an occurrence-to-cluster map, maturity classification, remaining uncertainty, and the smallest justified repair boundary.
+
+See [`../patterns/audit-to-repair-clustering-checklist.md`](../patterns/audit-to-repair-clustering-checklist.md) for the longer checklist.
+
 ## Using these skills together
 
 A common sequence is:
@@ -150,6 +179,7 @@ A common sequence is:
 Evidence Boundary Review
 → Verify exact input/output identity
 → Run decisive positive/negative checks
+→ Cluster repeated audit evidence where needed
 → Add independent review where it materially changes confidence
 → Preserve failure/supersession truth
 → Sanitize the reusable lesson for public sharing
