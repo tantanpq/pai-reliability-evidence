@@ -40,6 +40,9 @@ The repository intentionally publishes **bounded lessons and reusable evidence p
 - [`evidence/2026-08-31-reachable-path-policy-integrity.md`](evidence/2026-08-31-reachable-path-policy-integrity.md) — common-path tests passed, but route-level falsification found a weaker reachable path to the same protected effect.
 - [`evidence/2026-08-31-deterministic-source-frontier-resolution.md`](evidence/2026-08-31-deterministic-source-frontier-resolution.md) — bounded candidate resolved durable context deterministically from validated sources and failed closed on invalid source conditions.
 - [`evidence/2026-08-31-desired-observed-control-surface.md`](evidence/2026-08-31-desired-observed-control-surface.md) — desired intent, observed state, binding truth, and explicit reconciliation remained separate across a terminal candidate wave.
+- [`evidence/2026-08-31-correctness-error-budget.md`](evidence/2026-08-31-correctness-error-budget.md) — separates ordinary availability/latency misses from hard-zero correctness failures and keeps policy evaluation advisory-only.
+- [`evidence/2026-08-31-attempt-identity-continuity.md`](evidence/2026-08-31-attempt-identity-continuity.md) — preserves exact execution-attempt identity across restart, completion, and replay handling.
+- [`evidence/2026-08-31-evidence-gated-verification-membrane.md`](evidence/2026-08-31-evidence-gated-verification-membrane.md) — verifies behavior, evidence, ownership, and authority isolation while rejecting a duplicate policy owner despite green tests.
 
 ## 3. Reusable verification patterns
 
@@ -65,6 +68,9 @@ The repository intentionally publishes **bounded lessons and reusable evidence p
 - [`patterns/deterministic-source-resolution-contract.md`](patterns/deterministic-source-resolution-contract.md) — validate source identity and precedence before durable interpretation; keep volatile runtime truth separate.
 - [`patterns/source-binding-integrity-checklist.md`](patterns/source-binding-integrity-checklist.md) — bind physical source identity separately from semantic role, surface drift, and keep staged versus activated states explicit.
 - [`patterns/desired-observed-control-surface-checklist.md`](patterns/desired-observed-control-surface-checklist.md) — keep operator intent, runtime readback, binding state, drift, and reconciliation direction explicit.
+- [`patterns/correctness-error-budget-checklist.md`](patterns/correctness-error-budget-checklist.md) — define hard-zero correctness events, bounded change control, evidence-first resolution, and authority separation.
+- [`patterns/restart-attempt-identity-checklist.md`](patterns/restart-attempt-identity-checklist.md) — preserve one authoritative execution identity across interruption, completion, and replay.
+- [`patterns/verification-intake-checklist.md`](patterns/verification-intake-checklist.md) — verify scope, evidence, independence, ownership, and rollback before a stronger claim is admitted.
 
 ## 4. Case studies
 
@@ -89,6 +95,9 @@ The repository intentionally publishes **bounded lessons and reusable evidence p
 - [`case-studies/designing-an-ai-system-that-can-forget-safely.md`](case-studies/designing-an-ai-system-that-can-forget-safely.md) — source-only resume from verified durable context without treating conversation memory as authority.
 - [`case-studies/when-a-pointer-exists-but-isnt-trustworthy.md`](case-studies/when-a-pointer-exists-but-isnt-trustworthy.md) — source identity, semantic role, drift, staging, and activation are kept as separate claims.
 - [`case-studies/building-a-control-panel-that-refuses-to-lie.md`](case-studies/building-a-control-panel-that-refuses-to-lie.md) — mixed binding states and drift remain truthful instead of being flattened into fake live controls.
+- [`case-studies/when-no-errors-is-not-a-reliability-metric.md`](case-studies/when-no-errors-is-not-a-reliability-metric.md) — why a responsive service can still exhaust a correctness budget.
+- [`case-studies/the-restart-worked-but-was-it-still-the-same-attempt.md`](case-studies/the-restart-worked-but-was-it-still-the-same-attempt.md) — why restart recovery must preserve the exact original execution-attempt identity.
+- [`case-studies/when-passing-tests-are-still-the-wrong-answer.md`](case-studies/when-passing-tests-are-still-the-wrong-answer.md) — why green functional tests do not authorize a duplicate policy owner.
 
 ## 5. Synthetic demos
 
@@ -110,16 +119,21 @@ The repository intentionally publishes **bounded lessons and reusable evidence p
 - [`demos/one-policy-two-paths-walkthrough.md`](demos/one-policy-two-paths-walkthrough.md) — synthetic route-level falsifier exposing a weaker alternate path.
 - [`demos/stop-guessing-what-current-means.md`](demos/stop-guessing-what-current-means.md) — synthetic fail-closed durable-source projection with JIT runtime separation.
 - [`demos/the-settings-panel-that-knows-when-a-switch-is-fake.md`](demos/the-settings-panel-that-knows-when-a-switch-is-fake.md) — synthetic desired/observed and binding-state walkthrough.
+- [`demos/why-99-9-uptime-can-still-produce-a-false-pass.md`](demos/why-99-9-uptime-can-still-produce-a-false-pass.md) — synthetic availability-versus-correctness budget walkthrough.
+- [`demos/restart-recovery-without-identity-amnesia.md`](demos/restart-recovery-without-identity-amnesia.md) — synthetic restart and replay identity walkthrough.
+- [`demos/two-green-builds-one-valid-owner.md`](demos/two-green-builds-one-valid-owner.md) — synthetic demonstration that functional PASS does not grant architecture ownership.
 
 ## 6. How to choose what to read
 
 If your problem is **release/cutover confidence**, start with reversible cutover, pre-activation freeze, successor composition, single-owner soak, and release-scope integrity.
 
-If your problem is **recovery**, start with recoverability taxonomy, software DR, immutable evidence freeze, and provenance reconstruction.
+If your problem is **recovery**, start with recoverability taxonomy, software DR, immutable evidence freeze, provenance reconstruction, and restart attempt-identity continuity.
 
 If your problem is **security/safety boundaries**, start with ACL scope validation, Source Safety Gate, reachable-path policy integrity, and the public evidence-sanitization skill.
 
-If your problem is **trusting test results**, start with terminal-result supersession, Evidence Boundary Review, “verified but not activated,” release-scope integrity, and route-parity falsification.
+If your problem is **trusting test results**, start with terminal-result supersession, Evidence Boundary Review, “verified but not activated,” release-scope integrity, route-parity falsification, and the verification-intake material.
+
+If your problem is **reliability governance**, start with the correctness-error-budget evidence/checklist and then connect it to rollback, provenance, and current-state readback material.
 
 If your problem is **audit noise or duplicate repair work**, start with global assurance audit clustering, the audit-to-repair checklist, Skill 7, and the synthetic clustering walkthrough.
 
