@@ -12,6 +12,7 @@ The repository intentionally publishes **bounded lessons and reusable evidence p
 - [`ASSURANCE.md`](ASSURANCE.md) — community layer versus full private/commercial assurance workflow.
 - [`workflows/community-assurance-baseline.md`](workflows/community-assurance-baseline.md) — generic evidence-first workflow.
 - [`skills/README.md`](skills/README.md) — compact reusable assurance skill recipes, including audit finding clustering.
+- [`skills/release-scope-integrity.md`](skills/release-scope-integrity.md) — verify complete release composition against an authorized delta even when focused tests pass.
 
 ## 2. Core reliability evidence
 
@@ -32,6 +33,7 @@ The repository intentionally publishes **bounded lessons and reusable evidence p
 - [`evidence/2026-08-30-portable-secret-classification.md`](evidence/2026-08-30-portable-secret-classification.md) — reduce tested false positives without weakening tested fail-closed secret classes.
 - [`evidence/2026-08-30-post-promotion-ownership-continuity.md`](evidence/2026-08-30-post-promotion-ownership-continuity.md) — bounded ownership continuity after promotion.
 - [`evidence/2026-08-31-global-assurance-audit-clustering.md`](evidence/2026-08-31-global-assurance-audit-clustering.md) — 86 raw audit occurrences integrated into 27 bounded causal clusters while preserving incomplete coverage and repair separation.
+- [`evidence/2026-08-31-release-scope-integrity.md`](evidence/2026-08-31-release-scope-integrity.md) — a focused-test-passing candidate was correctly rejected when complete composition exceeded the qualified change scope.
 
 ## 3. Reusable verification patterns
 
@@ -52,6 +54,7 @@ The repository intentionally publishes **bounded lessons and reusable evidence p
 - [`patterns/source-safety-gate-checklist.md`](patterns/source-safety-gate-checklist.md)
 - [`patterns/single-owner-cutover-soak-gate.md`](patterns/single-owner-cutover-soak-gate.md)
 - [`patterns/audit-to-repair-clustering-checklist.md`](patterns/audit-to-repair-clustering-checklist.md) — dedupe occurrence noise, preserve coverage truth, cluster by causal boundary, and admit repair only when bounded.
+- [`patterns/release-scope-integrity-receipt.md`](patterns/release-scope-integrity-receipt.md) — complete baseline/candidate set comparison against an independently represented authorized delta.
 
 ## 4. Case studies
 
@@ -70,6 +73,7 @@ The repository intentionally publishes **bounded lessons and reusable evidence p
 - [`case-studies/when-token-is-just-a-variable-name.md`](case-studies/when-token-is-just-a-variable-name.md)
 - [`case-studies/a-canary-pass-is-not-a-stable-owner.md`](case-studies/a-canary-pass-is-not-a-stable-owner.md)
 - [`case-studies/86-findings-27-defects-zero-ticket-avalanche.md`](case-studies/86-findings-27-defects-zero-ticket-avalanche.md) — why raw audit volume should not become repair-task volume.
+- [`case-studies/green-tests-wrong-release.md`](case-studies/green-tests-wrong-release.md) — why passing behavior tests cannot launder unrelated packaging drift into an approved release.
 
 ## 5. Synthetic demos
 
@@ -87,16 +91,17 @@ The repository intentionally publishes **bounded lessons and reusable evidence p
 - [`demos/large-tree-freeze-evidence-storyboard.md`](demos/large-tree-freeze-evidence-storyboard.md)
 - [`demos/source-safety-gate-evidence-walkthrough.md`](demos/source-safety-gate-evidence-walkthrough.md)
 - [`demos/why-many-failures-might-be-one-defect.md`](demos/why-many-failures-might-be-one-defect.md) — synthetic occurrence-to-causal-cluster walkthrough.
+- [`demos/green-tests-wrong-release-walkthrough.md`](demos/green-tests-wrong-release-walkthrough.md) — synthetic full-tree release-scope gate after a passing focused suite.
 
 ## 6. How to choose what to read
 
-If your problem is **release/cutover confidence**, start with reversible cutover, pre-activation freeze, successor composition, and single-owner soak.
+If your problem is **release/cutover confidence**, start with reversible cutover, pre-activation freeze, successor composition, single-owner soak, and release-scope integrity.
 
 If your problem is **recovery**, start with recoverability taxonomy, software DR, immutable evidence freeze, and provenance reconstruction.
 
 If your problem is **security/safety boundaries**, start with ACL scope validation, Source Safety Gate, and the public evidence-sanitization skill.
 
-If your problem is **trusting test results**, start with terminal-result supersession, Evidence Boundary Review, and “verified but not activated.”
+If your problem is **trusting test results**, start with terminal-result supersession, Evidence Boundary Review, “verified but not activated,” and release-scope integrity.
 
 If your problem is **audit noise or duplicate repair work**, start with global assurance audit clustering, the audit-to-repair checklist, Skill 7, and the synthetic clustering walkthrough.
 
