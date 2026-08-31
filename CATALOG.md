@@ -62,6 +62,7 @@ The repository intentionally publishes **bounded lessons and reusable evidence p
 - [`patterns/release-scope-integrity-receipt.md`](patterns/release-scope-integrity-receipt.md) — complete baseline/candidate set comparison against an independently represented authorized delta.
 - [`patterns/reachable-path-policy-integrity-checklist.md`](patterns/reachable-path-policy-integrity-checklist.md) — enumerate all routes, bind one invariant to one governed owner, and falsify weaker special paths.
 - [`patterns/deterministic-source-resolution-contract.md`](patterns/deterministic-source-resolution-contract.md) — validate source identity and precedence before durable interpretation; keep volatile runtime truth separate.
+- [`patterns/source-binding-integrity-checklist.md`](patterns/source-binding-integrity-checklist.md) — bind physical source identity separately from semantic role, surface drift, and keep staged versus activated states explicit.
 
 ## 4. Case studies
 
@@ -84,6 +85,7 @@ The repository intentionally publishes **bounded lessons and reusable evidence p
 - [`case-studies/the-path-that-passed-around-the-policy.md`](case-studies/the-path-that-passed-around-the-policy.md) — common-path correctness did not close an alternate reachable route with weaker admission logic.
 - [`case-studies/making-current-state-a-verifiable-claim.md`](case-studies/making-current-state-a-verifiable-claim.md) — deterministic durable source resolution without confusing it with live runtime truth.
 - [`case-studies/designing-an-ai-system-that-can-forget-safely.md`](case-studies/designing-an-ai-system-that-can-forget-safely.md) — source-only resume from verified durable context without treating conversation memory as authority.
+- [`case-studies/when-a-pointer-exists-but-isnt-trustworthy.md`](case-studies/when-a-pointer-exists-but-isnt-trustworthy.md) — source identity, semantic role, drift, staging, and activation are kept as separate claims.
 
 ## 5. Synthetic demos
 
@@ -117,7 +119,7 @@ If your problem is **trusting test results**, start with terminal-result superse
 
 If your problem is **audit noise or duplicate repair work**, start with global assurance audit clustering, the audit-to-repair checklist, Skill 7, and the synthetic clustering walkthrough.
 
-If your problem is **stale handoffs or conflicting durable sources**, start with deterministic source/frontier resolution, its contract, and the synthetic “Stop Guessing What Current Means” walkthrough.
+If your problem is **stale handoffs or conflicting durable sources**, start with deterministic source/frontier resolution, source-binding integrity, and the synthetic “Stop Guessing What Current Means” walkthrough.
 
 If your problem is **session/model replacement or safe resume**, use the source-only resume runbook after the deterministic source-resolution material.
 
