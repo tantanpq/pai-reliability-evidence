@@ -22,6 +22,7 @@ The public material here is designed to help teams reason about questions such a
 - Is a PASS terminal and independently supported, or merely an intermediate state?
 - Did a later success genuinely supersede an earlier failure?
 - Can source-safety checks reject tested sensitive classes without blocking benign code?
+- Did an audit find many defects, or many repeated observations of a smaller number of causal defects?
 - Are release, security, or reliability claims broader than the evidence behind them?
 
 ## Start here
@@ -97,7 +98,8 @@ The workflow is tool-agnostic and intended for systems you own or are authorized
 - Canary-to-Soak Continuity Check;
 - Source Safety Gate Review;
 - Failure Supersession Review;
-- Public Evidence Sanitization.
+- Public Evidence Sanitization;
+- Audit Finding Clustering.
 
 These are public reasoning/verification recipes, not exports of the PAI internal executor or authority system.
 
@@ -114,7 +116,8 @@ The repository contains bounded public evidence across several reliability class
 - software DR: **13/13** allowlisted files restored byte-for-byte in the tested scope;
 - immutable provenance-chain reconstruction: **125/125** source checks and **58/58** focused continuity tests;
 - large-tree evidence freeze QA: **5,558 files / 194,318,686 bytes** with zero manifest mismatch in the verified scope;
-- post-promotion ownership continuity: **30/30** health observations, **48/48** campaign checks, and **12/12** targeted regressions.
+- post-promotion ownership continuity: **30/30** health observations, **48/48** campaign checks, and **12/12** targeted regressions;
+- assurance audit clustering: **44/44** scan shards terminal, **86 raw occurrences → 27 causal clusters**, including **9 repair-ready**, while repeated incomplete coverage was preserved instead of multiplied into repair jobs.
 
 These numbers are **evidence summaries, not marketing multipliers**. Every item remains bounded by its own test scope and claim limitations.
 
@@ -133,10 +136,12 @@ Examples include:
 - provenance-chain receipts;
 - Source Safety Gate;
 - Single-Owner Cutover Soak Gate;
+- Audit-to-Repair Clustering;
 - “Verify Bytes Before Trusting Text”;
 - “Prove the Restore, Not Just the Backup”;
 - “When Token Is Just a Variable Name”;
-- “A Canary Pass Is Not a Stable Owner.”
+- “A Canary Pass Is Not a Stable Owner”;
+- “86 Findings, 27 Defects, Zero Ticket Avalanche.”
 
 The matching evidence, checklists, and synthetic demos are indexed in [`CATALOG.md`](CATALOG.md).
 
