@@ -39,6 +39,7 @@ The repository intentionally publishes **bounded lessons and reusable evidence p
 - [`evidence/2026-08-31-release-scope-integrity.md`](evidence/2026-08-31-release-scope-integrity.md) — a focused-test-passing candidate was correctly rejected when complete composition exceeded the qualified change scope.
 - [`evidence/2026-08-31-reachable-path-policy-integrity.md`](evidence/2026-08-31-reachable-path-policy-integrity.md) — common-path tests passed, but route-level falsification found a weaker reachable path to the same protected effect.
 - [`evidence/2026-08-31-deterministic-source-frontier-resolution.md`](evidence/2026-08-31-deterministic-source-frontier-resolution.md) — bounded candidate resolved durable context deterministically from validated sources and failed closed on invalid source conditions.
+- [`evidence/2026-08-31-desired-observed-control-surface.md`](evidence/2026-08-31-desired-observed-control-surface.md) — desired intent, observed state, binding truth, and explicit reconciliation remained separate across a terminal candidate wave.
 
 ## 3. Reusable verification patterns
 
@@ -63,6 +64,7 @@ The repository intentionally publishes **bounded lessons and reusable evidence p
 - [`patterns/reachable-path-policy-integrity-checklist.md`](patterns/reachable-path-policy-integrity-checklist.md) — enumerate all routes, bind one invariant to one governed owner, and falsify weaker special paths.
 - [`patterns/deterministic-source-resolution-contract.md`](patterns/deterministic-source-resolution-contract.md) — validate source identity and precedence before durable interpretation; keep volatile runtime truth separate.
 - [`patterns/source-binding-integrity-checklist.md`](patterns/source-binding-integrity-checklist.md) — bind physical source identity separately from semantic role, surface drift, and keep staged versus activated states explicit.
+- [`patterns/desired-observed-control-surface-checklist.md`](patterns/desired-observed-control-surface-checklist.md) — keep operator intent, runtime readback, binding state, drift, and reconciliation direction explicit.
 
 ## 4. Case studies
 
@@ -86,6 +88,7 @@ The repository intentionally publishes **bounded lessons and reusable evidence p
 - [`case-studies/making-current-state-a-verifiable-claim.md`](case-studies/making-current-state-a-verifiable-claim.md) — deterministic durable source resolution without confusing it with live runtime truth.
 - [`case-studies/designing-an-ai-system-that-can-forget-safely.md`](case-studies/designing-an-ai-system-that-can-forget-safely.md) — source-only resume from verified durable context without treating conversation memory as authority.
 - [`case-studies/when-a-pointer-exists-but-isnt-trustworthy.md`](case-studies/when-a-pointer-exists-but-isnt-trustworthy.md) — source identity, semantic role, drift, staging, and activation are kept as separate claims.
+- [`case-studies/building-a-control-panel-that-refuses-to-lie.md`](case-studies/building-a-control-panel-that-refuses-to-lie.md) — mixed binding states and drift remain truthful instead of being flattened into fake live controls.
 
 ## 5. Synthetic demos
 
@@ -106,6 +109,7 @@ The repository intentionally publishes **bounded lessons and reusable evidence p
 - [`demos/green-tests-wrong-release-walkthrough.md`](demos/green-tests-wrong-release-walkthrough.md) — synthetic full-tree release-scope gate after a passing focused suite.
 - [`demos/one-policy-two-paths-walkthrough.md`](demos/one-policy-two-paths-walkthrough.md) — synthetic route-level falsifier exposing a weaker alternate path.
 - [`demos/stop-guessing-what-current-means.md`](demos/stop-guessing-what-current-means.md) — synthetic fail-closed durable-source projection with JIT runtime separation.
+- [`demos/the-settings-panel-that-knows-when-a-switch-is-fake.md`](demos/the-settings-panel-that-knows-when-a-switch-is-fake.md) — synthetic desired/observed and binding-state walkthrough.
 
 ## 6. How to choose what to read
 
@@ -122,6 +126,8 @@ If your problem is **audit noise or duplicate repair work**, start with global a
 If your problem is **stale handoffs or conflicting durable sources**, start with deterministic source/frontier resolution, source-binding integrity, and the synthetic “Stop Guessing What Current Means” walkthrough.
 
 If your problem is **session/model replacement or safe resume**, use the source-only resume runbook after the deterministic source-resolution material.
+
+If your problem is **operator controls, drift, or fake settings switches**, start with desired/observed control-surface evidence and checklist.
 
 ## Claim boundary
 
