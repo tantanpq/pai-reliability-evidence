@@ -1,106 +1,194 @@
 # PAI Reliability Evidence
 
-Public, sanitized evidence derived from verified PAI reliability results.
+Public, sanitized reliability and assurance evidence from PAI, organized as a **community-first Open Foundation**.
 
-## What this repository is
+This repository shares practical verification patterns, bounded evidence, synthetic demos, reusable workflows, and case studies for people building AI agents, automation, developer platforms, distributed systems, recovery paths, and safety-sensitive software.
 
-This repository publishes bounded reliability evidence and reusable verification patterns without exposing private implementation details, credentials, internal paths, or sensitive operational logs.
+It does **not** publish the complete PAI system.
 
-## Published evidence
+## Why this repository exists
 
-- Core candidate test suite: **35 passed, 0 failed**.
-- Focused SQLite lock-budget checks: **3 passed, 0 failed**.
-- Reversible cutover: independently QA-passed candidate, exact checked-byte readback, bounded restart, canary verification, terminal completion, and post-terminal readback passed.
-- Deterministic two-node failover simulation: **21/21 scenarios passed**, including strict lease expiry, single-writer takeover, monotonic fencing, stale-owner rejection, terminal-result reconciliation, provenance guards, and fail-closed unsafe-state handling. Production activation remained disabled.
-- Executor-timeout supersession: an infrastructure-timeout FAIL was preserved and explicitly superseded only after a later bounded PASS satisfied the acceptance evidence, including **39 focused tests across 4 suites**.
-- Evidence-first recoverability taxonomy: independent QA matched **174/174** baseline source tuples, passed **159/159** baseline tests, preserved **17/17** candidate source tuples, matched **4/4** pinned dependencies, and passed the full **166/166** isolated candidate suite. The work remained candidate-only and introduced no retry engine or control-plane authority.
-- Fail-closed ACL scope validation: candidate checks reported **3/3 syntax** and **4/4 unit/security** passes plus repeated isolated apply/readback; frozen-byte independent security QA subsequently reached **DONE / PASS** under exact-hash, containment, traversal/normalization, forbidden-path, fail-closed, and no-live-mutation acceptance. Physical/live validation is not claimed.
-- Evidence-driven reuse freeze: a terminal bootstrap/reuse run reached **DONE**, preserved unavailable proof as `UNKNOWN` rather than inventing missing components, reduced the next frontier to two bounded read/binding investigations, and independently re-verified all **8/8** evidence-bundle SHA-256 entries before publication.
-- Pre-activation freeze verification: candidate and independent read-only QA both reached terminal `DONE`; the complete suite passed **166/166**, focused suites passed **24/24**, a **171-entry** candidate tree was independently fingerprint-matched, and six bounded delta hashes were checked. The candidate deliberately remained frozen and not installed, preserving verification and runtime activation as separate decisions.
-- Portable byte-fidelity verification: independent QA verified **11/11 immutable manifest entries** totaling **22,356 bytes**, reconstructed the pinned baseline byte-for-byte, passed ordinary UTF-8 and UTF-8-with-BOM round trips, rejected malformed/unsupported text and embedded-NUL cases, and independently confirmed exact staged bytes without live-runtime mutation.
-- Software DR contract verification: **13/13 ordinary allowlisted files** were covered by full/incremental manifests and restored byte-for-byte in isolation; secret input was excluded, unsafe/missing/corrupt cases failed closed, and sealed-copy reuse/mutation behavior was verified at the software layer. Offline or physical immutability remains explicitly unproven.
-- Physical startup validation: the live startup path reached terminal **DONE / PASS** and independent post-effect QA also passed; a low-density canary completed **1/1**, a bounded burst completed **10/10**, independent re-query confirmed **11/11** physical completions, burst overlap peaked at **10**, execution/result identities were unique, and the narrow permission boundary remained fail-closed outside the intended scope. Continued polling and remote pull/placement remain outside the claim.
-- Successor composition verification: independent compositional QA returned **PASS_RELEASE_CANDIDATE** with no critical blockers; inherited security evidence included **42 independent QA checks**, four reused delta files were byte-identical to the prior reviewed candidate, the remaining integration change was bounded to **4 nonblank diff records**, and configured plus exact successor checks completed with exit `0` and empty stderr. The full successor tree was not independently re-executed, and activation is not claimed.
-- Immutable provenance-chain reconstruction: **125/125** source-manifest checks matched, a regenerated **55-entry** candidate tree matched its recorded fingerprint, the focused continuity suite passed **58/58**, executor/QA identities matched the recorded evidence chain, the reported change claim was byte-derived, and read-only pre/post bundle diff was **0**.
-- Immutable evidence freeze QA: independent readback covered **5,558 files / 194,318,686 bytes**, with zero manifest mismatches, exact pre/post evidence-digest agreement, and zero candidate/live mutations during QA. This proves freeze integrity only; physical activation and promotion remain separate gates.
-- Portable secret classification: build and independent QA both terminalized `DONE`; adversarial sensitive/benign/path/scope/carrier/UTF-8/BOM fixtures passed, showing bounded false-positive reduction for benign token-like identifiers while preserving the tested fail-closed secret classes. No live-runtime or release mutation was required, and universal secret detection is not claimed.
-- Post-promotion ownership continuity: the bounded soak and independent QA both terminalized `DONE / PASS`; **30/30** health observations passed, the associated campaign check completed **48/48** with **0 failures**, active claims remained **0** across the soak observations, and targeted regressions completed **12/12**. The prior competing owner remained disabled. Long-term HA/SLO or universal scheduler correctness is not claimed.
+Software teams already have plenty of green dashboards, passing jobs, and release labels. The harder question is:
 
-Evidence snapshots:
+> **What does the available evidence actually prove, and what is still unknown?**
 
-- [`evidence/2026-08-29-reliability-tests.md`](evidence/2026-08-29-reliability-tests.md)
-- [`evidence/2026-08-30-reversible-cutover-verification.md`](evidence/2026-08-30-reversible-cutover-verification.md)
-- [`evidence/2026-08-30-safe-failover-simulation.md`](evidence/2026-08-30-safe-failover-simulation.md)
-- [`evidence/2026-08-30-executor-timeout-supersession.md`](evidence/2026-08-30-executor-timeout-supersession.md)
-- [`evidence/2026-08-30-recoverability-taxonomy.md`](evidence/2026-08-30-recoverability-taxonomy.md)
-- [`evidence/2026-08-30-fail-closed-acl-scope-validation.md`](evidence/2026-08-30-fail-closed-acl-scope-validation.md)
-- [`evidence/2026-08-30-evidence-driven-reuse-freeze.md`](evidence/2026-08-30-evidence-driven-reuse-freeze.md)
-- [`evidence/2026-08-30-pre-activation-freeze-verification.md`](evidence/2026-08-30-pre-activation-freeze-verification.md)
-- [`evidence/2026-08-30-portable-byte-fidelity.md`](evidence/2026-08-30-portable-byte-fidelity.md)
-- [`evidence/2026-08-30-software-dr-contract.md`](evidence/2026-08-30-software-dr-contract.md)
-- [`evidence/2026-08-30-physical-startup-validation.md`](evidence/2026-08-30-physical-startup-validation.md)
-- [`evidence/2026-08-30-successor-composition-verification.md`](evidence/2026-08-30-successor-composition-verification.md)
-- [`evidence/2026-08-30-immutable-provenance-chain.md`](evidence/2026-08-30-immutable-provenance-chain.md)
-- [`evidence/2026-08-30-immutable-evidence-freeze-qa.md`](evidence/2026-08-30-immutable-evidence-freeze-qa.md)
-- [`evidence/2026-08-30-portable-secret-classification.md`](evidence/2026-08-30-portable-secret-classification.md)
-- [`evidence/2026-08-30-post-promotion-ownership-continuity.md`](evidence/2026-08-30-post-promotion-ownership-continuity.md)
+PAI Reliability Evidence focuses on that gap.
 
-Reusable derivatives:
+The public material here is designed to help teams reason about questions such as:
 
-- [`patterns/reversible-cutover-verification-checklist.md`](patterns/reversible-cutover-verification-checklist.md)
-- [`patterns/fail-closed-failover-checklist.md`](patterns/fail-closed-failover-checklist.md)
-- [`patterns/terminal-result-supersession-checklist.md`](patterns/terminal-result-supersession-checklist.md)
-- [`patterns/assurance-proof-pattern-pack.md`](patterns/assurance-proof-pattern-pack.md)
-- [`patterns/evidence-first-recovery-classification-checklist.md`](patterns/evidence-first-recovery-classification-checklist.md)
-- [`patterns/fail-closed-acl-scope-validation-checklist.md`](patterns/fail-closed-acl-scope-validation-checklist.md)
-- [`patterns/verified-reuse-freeze-checklist.md`](patterns/verified-reuse-freeze-checklist.md)
-- [`patterns/pre-activation-freeze-gate-checklist.md`](patterns/pre-activation-freeze-gate-checklist.md)
-- [`patterns/portable-byte-fidelity-checklist.md`](patterns/portable-byte-fidelity-checklist.md)
-- [`patterns/software-dr-acceptance-checklist.md`](patterns/software-dr-acceptance-checklist.md)
-- [`patterns/physical-startup-verification-checklist.md`](patterns/physical-startup-verification-checklist.md)
-- [`patterns/compositional-successor-verification-checklist.md`](patterns/compositional-successor-verification-checklist.md)
-- [`patterns/provenance-chain-receipt-checklist.md`](patterns/provenance-chain-receipt-checklist.md)
-- [`patterns/immutable-evidence-freeze-qa-checklist.md`](patterns/immutable-evidence-freeze-qa-checklist.md)
-- [`patterns/source-safety-gate-checklist.md`](patterns/source-safety-gate-checklist.md)
-- [`patterns/single-owner-cutover-soak-gate.md`](patterns/single-owner-cutover-soak-gate.md)
-- [`case-studies/reversible-cutover-terminal-readback.md`](case-studies/reversible-cutover-terminal-readback.md)
-- [`case-studies/deterministic-two-node-failover-simulation.md`](case-studies/deterministic-two-node-failover-simulation.md)
-- [`case-studies/fail-closed-recovery-classification.md`](case-studies/fail-closed-recovery-classification.md)
-- [`case-studies/acl-boundary-tightening-with-frozen-byte-qa.md`](case-studies/acl-boundary-tightening-with-frozen-byte-qa.md)
-- [`case-studies/reuse-freeze-before-successor-generation.md`](case-studies/reuse-freeze-before-successor-generation.md)
-- [`case-studies/verified-but-not-activated.md`](case-studies/verified-but-not-activated.md)
-- [`case-studies/verify-bytes-before-trusting-text.md`](case-studies/verify-bytes-before-trusting-text.md)
-- [`case-studies/prove-the-restore-not-just-the-backup.md`](case-studies/prove-the-restore-not-just-the-backup.md)
-- [`case-studies/from-permission-repair-to-physical-startup-proof.md`](case-studies/from-permission-repair-to-physical-startup-proof.md)
-- [`case-studies/review-the-delta-not-the-release-label.md`](case-studies/review-the-delta-not-the-release-label.md)
-- [`case-studies/reconstructing-evidence-behind-green-result.md`](case-studies/reconstructing-evidence-behind-green-result.md)
-- [`case-studies/freezing-a-large-evidence-tree-before-promotion.md`](case-studies/freezing-a-large-evidence-tree-before-promotion.md)
-- [`case-studies/when-token-is-just-a-variable-name.md`](case-studies/when-token-is-just-a-variable-name.md)
-- [`case-studies/a-canary-pass-is-not-a-stable-owner.md`](case-studies/a-canary-pass-is-not-a-stable-owner.md)
-- [`demos/reversible-cutover-evidence-walkthrough.md`](demos/reversible-cutover-evidence-walkthrough.md)
-- [`demos/failover-fencing-evidence-walkthrough.md`](demos/failover-fencing-evidence-walkthrough.md)
-- [`demos/recoverability-taxonomy-walkthrough.md`](demos/recoverability-taxonomy-walkthrough.md)
-- [`demos/acl-scope-validation-evidence-walkthrough.md`](demos/acl-scope-validation-evidence-walkthrough.md)
-- [`demos/unknown-is-not-missing-walkthrough.md`](demos/unknown-is-not-missing-walkthrough.md)
-- [`demos/green-build-frozen-release-walkthrough.md`](demos/green-build-frozen-release-walkthrough.md)
-- [`demos/same-text-different-bytes-walkthrough.md`](demos/same-text-different-bytes-walkthrough.md)
-- [`demos/backup-is-not-recovery-test-walkthrough.md`](demos/backup-is-not-recovery-test-walkthrough.md)
-- [`demos/physical-startup-evidence-walkthrough.md`](demos/physical-startup-evidence-walkthrough.md)
-- [`demos/successor-composition-evidence-walkthrough.md`](demos/successor-composition-evidence-walkthrough.md)
-- [`demos/provenance-chain-evidence-walkthrough.md`](demos/provenance-chain-evidence-walkthrough.md)
-- [`demos/large-tree-freeze-evidence-storyboard.md`](demos/large-tree-freeze-evidence-storyboard.md)
-- [`demos/source-safety-gate-evidence-walkthrough.md`](demos/source-safety-gate-evidence-walkthrough.md)
+- Did the declared output really materialize?
+- Can the system recover the exact state or bytes it claims to protect?
+- Did a cutover leave one stable owner or a hidden race?
+- Is a PASS terminal and independently supported, or merely an intermediate state?
+- Did a later success genuinely supersede an earlier failure?
+- Can source-safety checks reject tested sensitive classes without blocking benign code?
+- Are release, security, or reliability claims broader than the evidence behind them?
 
-See [`PROVENANCE.md`](PROVENANCE.md) for publication boundaries.
+## Start here
 
-## Claim boundary
+If you are new to the repository:
 
-These results show only that the listed checks passed in the captured runs. They are not a claim of production certification, universal correctness, security certification, availability guarantee, or zero defects.
+1. Read [`PROVENANCE.md`](PROVENANCE.md) for evidence and publication discipline.
+2. Read [`OPEN_FOUNDATION.md`](OPEN_FOUNDATION.md) for the public versus Protected Core boundary.
+3. Use [`workflows/community-assurance-baseline.md`](workflows/community-assurance-baseline.md) on a disposable or authorized system.
+4. Pick a reusable recipe from [`skills/README.md`](skills/README.md).
+5. Browse [`CATALOG.md`](CATALOG.md) for evidence, patterns, case studies, and demos by problem class.
+6. Read [`COMMUNITY.md`](COMMUNITY.md) if you want to reuse or contribute material.
 
-## Publication policy
+## What is open
 
-Only evidence that can be shared without leaking private PAI internals is published here. Private source code, credentials, host details, internal paths, raw sensitive logs, and unlicensed third-party material are intentionally excluded.
+The Open Foundation may include verified and public-safe:
+
+- evidence summaries;
+- acceptance checklists and verification patterns;
+- synthetic fixtures and demos;
+- reusable skill recipes;
+- workflow templates;
+- public-safe schemas and evidence contracts;
+- standards/interoperability examples;
+- bounded case studies and negative lessons.
+
+The goal is to make these useful **without requiring payment or access to private PAI internals**.
+
+## What remains protected
+
+The repository intentionally does not disclose the whole PAI capability surface.
+
+Protected material includes, unless separately and explicitly published:
+
+- PAI Mind and private continuity/authority internals;
+- private source code and operational configuration;
+- credentials, trust roots, private runtime details, and sensitive logs;
+- deep proprietary optimizations;
+- protected evaluation corpora and hidden adversarial suites;
+- private/shared failure-intelligence datasets and repair lineage;
+- customer/tenant source, traces, incidents, evidence, and data;
+- private/sovereign execution internals.
+
+Open knowledge and a protected core are not contradictory. The public layer should improve the wider engineering community while the protected layer preserves privacy, safety, customer ownership, and legitimate product differentiation.
+
+## Community assurance workflow
+
+A generic evidence-first workflow is published at:
+
+[`workflows/community-assurance-baseline.md`](workflows/community-assurance-baseline.md)
+
+It covers:
+
+```text
+LOCK THE CLAIM
+→ PIN THE THING BEING TESTED
+→ SEPARATE PLANNED / RUNNING / PASS / LIVE / DONE
+→ CHOOSE THE SMALLEST DECISIVE CHECKS
+→ RUN POSITIVE + NEGATIVE EVIDENCE
+→ PRESERVE TERMINAL FAILURE/SUPERSESSION TRUTH
+→ ADD INDEPENDENT REVIEW WHERE IT MATERIALLY CHANGES CONFIDENCE
+→ SANITIZE ONLY THE REUSABLE LESSON FOR PUBLICATION
+```
+
+The workflow is tool-agnostic and intended for systems you own or are authorized to evaluate.
+
+## Reusable skill recipes
+
+[`skills/README.md`](skills/README.md) currently includes compact recipes for:
+
+- Evidence Boundary Review;
+- Verify Bytes Before Trusting Labels;
+- Canary-to-Soak Continuity Check;
+- Source Safety Gate Review;
+- Failure Supersession Review;
+- Public Evidence Sanitization.
+
+These are public reasoning/verification recipes, not exports of the PAI internal executor or authority system.
+
+## Selected verified evidence
+
+The repository contains bounded public evidence across several reliability classes, including:
+
+- core candidate tests: **35 passed, 0 failed**;
+- focused SQLite lock-budget checks: **3 passed, 0 failed**;
+- deterministic two-node failover simulation: **21/21** scenarios passed;
+- executor-timeout supersession: **39 focused tests across 4 suites** after preserving the earlier failure;
+- recoverability classification: **159/159** baseline tests and **166/166** isolated candidate tests with exact source/dependency checks;
+- portable byte-fidelity: **11/11** immutable entries totaling **22,356 bytes** plus encoding edge cases;
+- software DR: **13/13** allowlisted files restored byte-for-byte in the tested scope;
+- immutable provenance-chain reconstruction: **125/125** source checks and **58/58** focused continuity tests;
+- large-tree evidence freeze QA: **5,558 files / 194,318,686 bytes** with zero manifest mismatch in the verified scope;
+- post-promotion ownership continuity: **30/30** health observations, **48/48** campaign checks, and **12/12** targeted regressions.
+
+These numbers are **evidence summaries, not marketing multipliers**. Every item remains bounded by its own test scope and claim limitations.
+
+See [`CATALOG.md`](CATALOG.md) for the full public index.
+
+## Useful patterns and case studies
+
+Examples include:
+
+- reversible cutover verification;
+- fail-closed failover and fencing;
+- terminal result supersession;
+- evidence-first recovery classification;
+- pre-activation freeze gates;
+- software disaster-recovery acceptance;
+- provenance-chain receipts;
+- Source Safety Gate;
+- Single-Owner Cutover Soak Gate;
+- “Verify Bytes Before Trusting Text”;
+- “Prove the Restore, Not Just the Backup”;
+- “When Token Is Just a Variable Name”;
+- “A Canary Pass Is Not a Stable Owner.”
+
+The matching evidence, checklists, and synthetic demos are indexed in [`CATALOG.md`](CATALOG.md).
+
+## PAI Assurance
+
+The public repository is not a paywall preview. The Open Foundation should remain useful on its own.
+
+Some teams, however, need deeper verification on private products or customer-controlled environments. [`ASSURANCE.md`](ASSURANCE.md) describes the boundary for a fuller PAI Assurance workflow that may include, when authorized and appropriate:
+
+- exact product/change and claim lock;
+- private reality/source/release reconstruction;
+- fidelity verification;
+- restart, fault, differential, mutation, black-box, recovery, lifecycle, or security checks selected for the real risk;
+- failure-staircase continuation;
+- root-seam repair and reverification;
+- independent assurance;
+- reproducible private evidence bundles;
+- repeated assurance on meaningful changes;
+- private/sovereign execution where required.
+
+That deeper path may become a paid/commercial engagement when private execution, specialist review, customer-specific reconstruction, controlled environments, repeated verification, or material delivery cost is involved.
+
+This repository does **not** claim that every commercial package is generally available, certified, or proven at scale. Commercial maturity must be demonstrated through real users, paid evidence, measured value, renewal/expansion, and repeatable delivery.
+
+## Evidence and publication rules
+
+Public material follows several non-negotiable rules:
+
+- planned/materialized/running is not terminal `DONE`;
+- a PASS is not automatically LIVE or production-ready;
+- failures are preserved rather than edited out of history;
+- `UNKNOWN` is better than invented evidence;
+- independent QA is used when it materially changes confidence;
+- public claims stay narrower than or equal to the verified evidence;
+- credentials, private source, sensitive logs, internal paths/hosts, customer data, and unnecessary private fingerprints are excluded;
+- third-party material must have clear rights and provenance;
+- cyber/security content is defensive and authorization-bound.
+
+See [`PROVENANCE.md`](PROVENANCE.md).
 
 ## License
 
-No license is specified for this repository at this time.
+Unless a file says otherwise, public **non-code content** in this repository is licensed under **Creative Commons Attribution 4.0 International (CC BY 4.0)**.
+
+See [`LICENSE.md`](LICENSE.md) for scope and exclusions.
+
+The license applies to public content the repository owner or contributors have the rights to license. It does **not** grant rights to unpublished/private PAI material, Protected Core content, customer evidence, third-party material, trademarks, or future software without an explicit software license.
+
+## Claim boundary
+
+This repository is not a certification authority, security warranty, high-availability guarantee, or claim of zero defects.
+
+Its purpose is narrower and, ideally, more useful:
+
+> **Publish verifiable lessons about how to know what a system actually did, what the evidence supports, what failed, what was repaired, and what remains unknown.**
