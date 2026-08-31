@@ -11,6 +11,7 @@ The repository intentionally publishes **bounded lessons and reusable evidence p
 - [`COMMUNITY.md`](COMMUNITY.md) — how to learn from and contribute to the repository.
 - [`ASSURANCE.md`](ASSURANCE.md) — community layer versus full private/commercial assurance workflow.
 - [`workflows/community-assurance-baseline.md`](workflows/community-assurance-baseline.md) — generic evidence-first workflow.
+- [`runbooks/source-only-resume.md`](runbooks/source-only-resume.md) — reconstruct durable context from verified sources after a fresh session, while fetching volatile runtime truth JIT.
 - [`skills/README.md`](skills/README.md) — compact reusable assurance skill recipes, including audit finding clustering.
 - [`skills/release-scope-integrity.md`](skills/release-scope-integrity.md) — verify complete release composition against an authorized delta even when focused tests pass.
 - [`skills/reachable-path-policy-integrity.md`](skills/reachable-path-policy-integrity.md) — verify one invariant across every reachable route to a protected effect.
@@ -82,6 +83,7 @@ The repository intentionally publishes **bounded lessons and reusable evidence p
 - [`case-studies/green-tests-wrong-release.md`](case-studies/green-tests-wrong-release.md) — why passing behavior tests cannot launder unrelated packaging drift into an approved release.
 - [`case-studies/the-path-that-passed-around-the-policy.md`](case-studies/the-path-that-passed-around-the-policy.md) — common-path correctness did not close an alternate reachable route with weaker admission logic.
 - [`case-studies/making-current-state-a-verifiable-claim.md`](case-studies/making-current-state-a-verifiable-claim.md) — deterministic durable source resolution without confusing it with live runtime truth.
+- [`case-studies/designing-an-ai-system-that-can-forget-safely.md`](case-studies/designing-an-ai-system-that-can-forget-safely.md) — source-only resume from verified durable context without treating conversation memory as authority.
 
 ## 5. Synthetic demos
 
@@ -116,6 +118,8 @@ If your problem is **trusting test results**, start with terminal-result superse
 If your problem is **audit noise or duplicate repair work**, start with global assurance audit clustering, the audit-to-repair checklist, Skill 7, and the synthetic clustering walkthrough.
 
 If your problem is **stale handoffs or conflicting durable sources**, start with deterministic source/frontier resolution, its contract, and the synthetic “Stop Guessing What Current Means” walkthrough.
+
+If your problem is **session/model replacement or safe resume**, use the source-only resume runbook after the deterministic source-resolution material.
 
 ## Claim boundary
 
