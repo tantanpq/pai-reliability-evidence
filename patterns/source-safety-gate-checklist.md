@@ -29,6 +29,8 @@ Record at least:
 - runtime-mutation count;
 - unsupported claims.
 
+A copy-ready public template is available at [`../templates/source-safety-classification-receipt.md`](../templates/source-safety-classification-receipt.md).
+
 ## Acceptance
 
 - [ ] Exact source bytes were pinned before classification.
