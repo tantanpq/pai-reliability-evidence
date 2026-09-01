@@ -143,6 +143,26 @@ If your problem is **session/model replacement or safe resume**, use the source-
 
 If your problem is **operator controls, drift, or fake settings switches**, start with desired/observed control-surface evidence and checklist.
 
+## 7. Reconciled publication wave — 2026-08-31
+
+A scope-specific repository-owner disposition on 2026-09-01 accepted the following eight already-public files as the complete bounded wave. This reconciles publication state only; it does not change any technical verdict inside the files.
+
+**Deterministic resident recovery**
+
+- [`evidence/2026-08-31-deterministic-resident-recovery.md`](evidence/2026-08-31-deterministic-resident-recovery.md)
+- [`patterns/deterministic-stale-ownership-recovery-checklist.md`](patterns/deterministic-stale-ownership-recovery-checklist.md)
+- [`case-studies/recover-the-claim-not-the-fiction.md`](case-studies/recover-the-claim-not-the-fiction.md)
+- [`demos/stale-task-claim-recovery-walkthrough.md`](demos/stale-task-claim-recovery-walkthrough.md)
+
+**Composition reachability**
+
+- [`evidence/2026-08-31-composition-reachability.md`](evidence/2026-08-31-composition-reachability.md)
+- [`patterns/composition-reachability-checklist.md`](patterns/composition-reachability-checklist.md)
+- [`case-studies/the-test-passed-because-the-dependency-was-handed-to-it.md`](case-studies/the-test-passed-because-the-dependency-was-handed-to-it.md)
+- [`demos/injection-is-not-reachability-walkthrough.md`](demos/injection-is-not-reachability-walkthrough.md)
+
+Publication provenance and readback details are recorded in [`evidence/2026-09-01-publication-reconciliation-receipt.md`](evidence/2026-09-01-publication-reconciliation-receipt.md).
+
 ## Claim boundary
 
 This catalog is an index of public evidence and learning material. Inclusion here does not make an item a certification, production guarantee, product availability claim, or disclosure of the PAI Protected Core.
