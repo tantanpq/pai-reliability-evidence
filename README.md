@@ -1,5 +1,7 @@
 # PAI Reliability Evidence
 
+> **PAI public development has converged into [tantanpq/PAI](https://github.com/tantanpq/PAI).** This repository remains a public reliability-evidence archive and provenance source while its strongest reusable assets are curated into the primary PAI monorepo. Existing evidence, failure history, links, and CC BY 4.0 non-code licensing remain preserved here.
+
 Public, sanitized reliability and assurance evidence from PAI, organized as a **community-first Open Foundation**.
 
 This repository shares practical verification patterns, bounded evidence, synthetic demos, reusable workflows, and case studies for people building AI agents, automation, developer platforms, distributed systems, recovery paths, and safety-sensitive software.
