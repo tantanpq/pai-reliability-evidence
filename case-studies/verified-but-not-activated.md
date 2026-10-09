@@ -1,3 +1,7 @@
+> **ARCHIVED** — merged into `tantanpq/PAI` (`case-studies/verified-but-not-activated.md`) on 2026-10-09 (byte-identical snapshot). Canonical version: [PAI/case-studies/verified-but-not-activated.md](https://github.com/tantanpq/PAI/blob/main/case-studies/verified-but-not-activated.md). This copy is a historical snapshot — do not edit.
+
+---
+
 # Verified, but Not Activated
 
 ## Situation

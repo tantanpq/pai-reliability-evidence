@@ -1,3 +1,7 @@
+> **ARCHIVED** — merged into `tantanpq/PAI` (`skills/reachable-path-policy-integrity.md`) on 2026-10-09. Canonical version: [PAI/skills/reachable-path-policy-integrity.md](https://github.com/tantanpq/PAI/blob/main/skills/reachable-path-policy-integrity.md). This copy is a historical snapshot — do not edit.
+
+---
+
 # Skill — Reachable-Path Policy Integrity Review
 
 **Use when:** multiple routes can reach the same protected action and you need evidence that every route enforces the same safety/authority invariant.

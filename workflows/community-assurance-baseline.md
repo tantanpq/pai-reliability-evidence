@@ -1,3 +1,7 @@
+> **ARCHIVED** — merged into `tantanpq/PAI` (`workflows/community-assurance-baseline.md`) on 2026-10-09. Canonical version: [PAI/workflows/community-assurance-baseline.md](https://github.com/tantanpq/PAI/blob/main/workflows/community-assurance-baseline.md). This copy is a historical snapshot — do not edit.
+
+---
+
 # Community Assurance Baseline
 
 A public, tool-agnostic workflow for checking whether a reliability or automation claim is actually supported by evidence.

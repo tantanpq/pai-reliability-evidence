@@ -1,3 +1,7 @@
+> **ARCHIVED** — merged into `tantanpq/PAI` (`skills/release-scope-integrity.md`) on 2026-10-09. Canonical version: [PAI/skills/release-scope-integrity.md](https://github.com/tantanpq/PAI/blob/main/skills/release-scope-integrity.md). This copy is a historical snapshot — do not edit.
+
+---
+
 # Skill — Release-Scope Integrity Review
 
 **Use when:** a release candidate passes focused tests but you need to verify that the complete candidate contains only the file-level changes that were actually authorized.

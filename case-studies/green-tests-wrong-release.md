@@ -1,3 +1,7 @@
+> **ARCHIVED** — merged into `tantanpq/PAI` (`case-studies/green-tests-wrong-release.md`) on 2026-10-09. Canonical version: [PAI/case-studies/green-tests-wrong-release.md](https://github.com/tantanpq/PAI/blob/main/case-studies/green-tests-wrong-release.md). This copy is a historical snapshot — do not edit.
+
+---
+
 # Green Tests, Wrong Release
 
 ## Situation

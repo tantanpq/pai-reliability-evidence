@@ -1,3 +1,7 @@
+> **ARCHIVED** — merged into `tantanpq/PAI` (`runbooks/source-only-resume.md`) on 2026-10-09. Canonical version: [PAI/runbooks/source-only-resume.md](https://github.com/tantanpq/PAI/blob/main/runbooks/source-only-resume.md). This copy is a historical snapshot — do not edit.
+
+---
+
 # Source-Only Resume Runbook
 
 Use this runbook when an AI agent, automation worker, or long-running workflow must resume from a fresh session without treating conversation memory or cached summaries as authority.

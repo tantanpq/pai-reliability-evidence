@@ -1,3 +1,7 @@
+> **ARCHIVED** — merged into `tantanpq/PAI` (`patterns/reachable-path-policy-integrity-checklist.md`) on 2026-10-09. Canonical version: [PAI/patterns/reachable-path-policy-integrity-checklist.md](https://github.com/tantanpq/PAI/blob/main/patterns/reachable-path-policy-integrity-checklist.md). This copy is a historical snapshot — do not edit.
+
+---
+
 # Reachable-Path Policy Integrity Checklist
 
 Use this checklist when multiple execution routes can reach the same protected effect and the policy must be enforced consistently across all of them.

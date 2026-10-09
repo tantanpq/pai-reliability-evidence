@@ -1,3 +1,7 @@
+> **ARCHIVED** — merged into `tantanpq/PAI` (`patterns/deterministic-source-resolution-contract.md`) on 2026-10-09. Canonical version: [PAI/patterns/deterministic-source-resolution-contract.md](https://github.com/tantanpq/PAI/blob/main/patterns/deterministic-source-resolution-contract.md). This copy is a historical snapshot — do not edit.
+
+---
+
 # Deterministic Source Resolution Contract
 
 Use this contract when an automation must resolve durable “what should I read/use?” context without turning stale hints or chat history into authority.

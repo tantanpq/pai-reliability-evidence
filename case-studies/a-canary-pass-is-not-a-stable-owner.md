@@ -1,3 +1,7 @@
+> **ARCHIVED** — merged into `tantanpq/PAI` (`case-studies/a-canary-pass-is-not-a-stable-owner.md`) on 2026-10-09 (byte-identical snapshot). Canonical version: [PAI/case-studies/a-canary-pass-is-not-a-stable-owner.md](https://github.com/tantanpq/PAI/blob/main/case-studies/a-canary-pass-is-not-a-stable-owner.md). This copy is a historical snapshot — do not edit.
+
+---
+
 # A Canary Pass Is Not a Stable Owner
 
 ## Situation

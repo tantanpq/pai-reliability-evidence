@@ -1,3 +1,7 @@
+> **ARCHIVED** — merged into `tantanpq/PAI` (`skills/deterministic-source-resolution.md`) on 2026-10-09. Canonical version: [PAI/skills/deterministic-source-resolution.md](https://github.com/tantanpq/PAI/blob/main/skills/deterministic-source-resolution.md). This copy is a historical snapshot — do not edit.
+
+---
+
 # Skill — Deterministic Source Resolution
 
 **Use when:** an automation must decide which durable Program/phase/checkpoint/context is authoritative without trusting stale chat history, filename recency, or cached runtime hints.
